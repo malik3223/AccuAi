@@ -1,0 +1,203 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Abichandani Fund</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <!-- Bootstrap 5.3.2 CSS -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link href="style.css" rel="stylesheet" />
+     <link rel="stylesheet" href="bootstrap.min.css">
+
+</head>
+<body>
+  <div class="custom-container">
+<!-- Header -->
+<header class="header">
+  <h1 class="title">
+    <select id="fund-select" class="fund-dropdown-in-title">
+      <option value="abichandani">Abichandani Fund</option>
+      <option value="growth">Growth Fund</option>
+      <option value="equity">Equity Fund</option>
+      <option value="retirement">TEST for long title overflow hidden</option>
+    </select>
+  </h1>
+  </h1>
+  <div class="header-right">
+    <span class="welcome-text">Welcome, Manoj</span>
+
+    <!-- Hamburger with dropdown -->
+    <div class="menu-wrapper">
+      <button aria-label="Menu" class="menu-btn" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Dropdown Menu -->
+      <div class="dropdown-menu" id="dropdownMenu">
+        <button class="dropdown-item">My Details</button>
+        <button class="dropdown-item logout">Log Out</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="main-content">
+  <div class="grid-2">
+    <section class="custom-card2">
+      <div class="custom-card-header">Fund Details</div>
+      <div class="card-body grid-2">
+        <button class="custom-btn icon-btn small-label">
+          <img src="assets/icons/Fund Details.png" alt="Fund Details" />
+          <span>Fund Details</span>
+        </button>
+        
+        <button class="custom-btn icon-btn small-label">
+          <img src="assets/icons/add-member.png" alt="Add Member" />
+          <span>Add Member</span>
+        </button>
+        <button class="custom-btn icon-btn small-label">
+          <img src="assets/icons/remove-member.png" alt="Remove Member" />
+          <span>Remove Member</span>
+        </button>
+        <button class="custom-btn icon-btn small-label">
+          <img src="assets/icons/change-trustee.png" alt="Change Trustee" />
+          <span>Change Trustee</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="custom-card2">
+      <div class="custom-card-header">Fund Action</div>
+      <div class="card-body grid-2">
+        <button class="custom-btn icon-btn small-label">
+          <img src="assets/icons/pension.png" alt="Commence Pension" />
+          <span>Commence<br>Pension</span>
+        </button>
+        <button class="custom-btn icon-btn small-label">
+          <img src="assets/icons/LRBA.png" alt="LRBA" />
+          <span>LRBA</span>
+        </button>
+        <button class="custom-btn icon-btn small-label">
+          <img src="assets/icons/Death_Nomination.png" alt="Death Nomination" />
+          <span>Death<br>Nomination</span>
+        </button>
+        <button class="custom-btn icon-btn small-label">
+          <img src="assets/icons/sign-now.png" alt="Sign Doc Now" />
+          <span>Sign<br>Doc Now</span>
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <div class="grid-2">
+    <section class="custom-card2">
+      <div class="custom-card-header">Queries</div>
+      <div class="card-body grid-2">
+          <a href="query.html" class="custom-btn icon-btn small-label">
+          <img src="assets/icons/Asnwer_Query.png" alt="Answer Queries" />
+          <span>Answer<br>Queries</span> </a>
+        </button>
+        <button class="custom-btn icon-btn small-label">
+          <img src="assets/icons/Raise_Query.png" alt="Raise a Queries" />
+          <span>Raise a<br>Queries</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="custom-card2">
+      <div class="custom-card-header">Upload Fund Doc</div>
+      <div class="card-body grid-2">
+        <button class="custom-btn icon-btn2 small-label">
+          <img src="assets/icons/Permanent_doc.png" alt="Permanent Docs" />
+          <span>Permanent<br>Docs</span>
+        </button>
+        <button class="custom-btn icon-btn2 small-label">
+          <img src="assets/icons/Current_year_Doc.png" alt="Current Year Docs" />
+          <span>Current<br>Year Docs</span>
+        </button>
+        <button class="custom-btn icon-btn2 small-label">
+          <img src="assets/icons/previous_Year.png" alt="Previous Year Docs" />
+          <span>Previous<br>Year Docs</span>
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <section class="custom-card2">
+    <div class="custom-card-header">Download Fund Doc</div>
+    <div class="card-body grid-5">
+      <button class="custom-btn icon-btn3 small-label small-label">
+        <img src="assets/icons/Permanent_down.png" alt="Permanent Docs" />
+        <span>Permanent<br>Docs</span>
+      </button>
+      <button class="custom-btn icon-btn3 small-label">
+        <img src="assets/icons/Current_year_Down.png" alt="Current Year Docs" />
+        <span>Current<br>Year Docs</span>
+      </button>
+      <button class="custom-btn icon-btn3 small-label">
+        <img src="assets/icons/previous_year_down.png" alt="Previous Year Docs" />
+        <span>Previous<br>Year Docs</span>
+      </button>
+      <button class="custom-btn icon-btn3 small-label">
+        <img src="assets/icons/admin_doc_down.png" alt="Admin Doc" />
+        <span>Admin<br>Doc</span>
+      </button>
+      <button class="custom-btn icon-btn3 small-label">
+        <img src="assets/icons/signed_doc.png" alt="Signed Docs" />
+        <span>Signed<br>Docs</span>
+      </button>
+    </div>
+  </section>
+</main>
+
+
+<footer class="footer bg-info text-white text-center fixed-bottom py-3">
+  2025 © Accu AI - All rights reserved.
+</footer>
+  </div>
+  <script src="script.js"></script>
+  <div class="modal fade" id="readQueryModal" tabindex="-1" aria-labelledby="readQueryModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="readQueryModalLabel">Sanjayraj SMSF Fund</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <p><strong>Subject:</strong> SB1</p>
+
+        <div class="table-responsive">
+          <table class="table table-bordered align-middle text-center">
+            <thead class="table-light">
+              <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Answered By</th>
+                <th>Message</th>
+                <th>Document Title</th>
+                <th>Document Description</th>
+                <th>Download</th>
+              </tr>
+            </thead>
+            <tbody id="readQueryConversation">
+              <tr class="table-success">
+                <td>28/07/2025</td>
+                <td>5:59:47 PM</td>
+                <td>Sanjayraj Jadeja</td>
+                <td>test ansewewe</td>
+                <td>Trust Deed</td>
+                <td>Trust update v2</td>
+                <td><a href="#" class="btn btn-sm btn-outline-primary">Download</a></td>
+              </tr>
+              <tr class="table-success">
+                <td>28/07/2025</td>
+                <td>6:13:22 PM</td>
+                <td>Henry Accountant</td>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  
+</body>
+</html>
