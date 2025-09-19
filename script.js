@@ -117,4 +117,47 @@ function searchQueries() {
     }
   });
 }
-mt - 1;
+document.addEventListener("DOMContentLoaded", function () {
+  const rowsPerPage = 5;
+  let currentPage = 1;
+
+  const table = document.querySelector(".query-table"); // active table
+  const prevBtn = document.getElementById("prevPage");
+  const nextBtn = document.getElementById("nextPage");
+
+  function showPage(page) {
+    const rows = Array.from(table.querySelectorAll("tbody tr.query-row"));
+    const totalPages = Math.ceil(rows.length / rowsPerPage);
+
+    // hide all rows
+    rows.forEach(r => r.style.display = "none");
+
+    // show current page rows
+    const start = (page - 1) * rowsPerPage;
+    const end = start + rowsPerPage;
+    rows.slice(start, end).forEach(r => r.style.display = "table-row");
+
+    // enable/disable buttons
+    prevBtn.parentElement.classList.toggle("disabled", page === 1);
+    nextBtn.parentElement.classList.toggle("disabled", page === totalPages);
+  }
+
+  prevBtn.addEventListener("click", e => {
+    e.preventDefault();
+    if (currentPage > 1) currentPage--;
+    showPage(currentPage);
+  });
+
+  nextBtn.addEventListener("click", e => {
+    e.preventDefault();
+    const rows = Array.from(table.querySelectorAll("tbody tr.query-row"));
+    const totalPages = Math.ceil(rows.length / rowsPerPage);
+    if (currentPage < totalPages) currentPage++;
+    showPage(currentPage);
+  });
+
+  // initial load
+  showPage(currentPage);
+});
+
+
