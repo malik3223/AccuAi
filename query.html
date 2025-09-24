@@ -590,7 +590,68 @@
 
                 <!-- Modal Footer -->
                 <div class="modal-footer text-center">
-                  <button type="button" class="btn btn-info">Reply</button>
+                  <button
+                    type="button"
+                    class="btn btn-info"
+                    data-bs-toggle="modal"
+                    data-bs-target="#replyModal"
+                  >
+                    Reply
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Reply Modal -->
+          <div
+            class="modal fade"
+            id="replyModal"
+            tabindex="-1"
+            aria-labelledby="replyModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h5 class="modal-title" id="replyModalLabel">Reply</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="replyMessage" class="form-label"
+                        >Your Message</label
+                      >
+                      <textarea
+                        class="form-control"
+                        id="replyMessage"
+                        rows="4"
+                        placeholder="Type your reply here..."
+                      ></textarea>
+                    </div>
+                  </form>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-success">
+                    Send Reply
+                  </button>
                   <button
                     type="button"
                     class="btn btn-secondary"
@@ -915,7 +976,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer fixed-bottom">
+    <footer class="footer">
       &copy; 2025 Your Company. All rights reserved.
     </footer>
 
