@@ -21,6 +21,7 @@
     color: var(--text-dark);
     font-size: 12px;
     line-height: 1.2;
+    padding-bottom: 80px;
   }
 
   .custom-container {
@@ -327,6 +328,10 @@
 
   /* Footer */
   .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background-color: #3ac3db;
     color: white;
     font-weight: 800;
@@ -334,6 +339,7 @@
     text-align: center;
     padding: 12px 0;
     user-select: none;
+    z-index: 1030; /* keeps it above Bootstrap elements */
   }
 
   .icon-btn {
