@@ -111,7 +111,9 @@
     font-size: 15px;
     color: #0d47a1; /* Darker blue text */
     cursor: pointer;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
     border-radius: 6px;
   }
 
@@ -453,13 +455,11 @@
   }
   .btn-back {
     font-size: 14px;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
     color: #3ac3db;
     font-weight: 600;
-    gap: 10px;
+    gap: 5px;
     text-decoration: none;
-    margin-bottom: 10px;
     display: inline-block;
   }
 
@@ -592,7 +592,9 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
   }
 
   .tab-btn.active {
@@ -769,5 +771,14 @@
   #queryTabs.custom-tabs .tab-btn {
     display: inline-flex;
     align-items: center;
+  }
+  .nav-tabs .nav-link.active {
+    background-color: #3ac3db !important;
+    color: #fff !important;
+    border-color: #3ac3db #3ac3db #fff !important;
+  }
+
+  .nav-tabs .nav-link {
+    color: #333;
   }
 }

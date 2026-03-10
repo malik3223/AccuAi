@@ -1,0 +1,466 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Abichandani Fund</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap 5.3.2 CSS -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+  </head>
+  <body>
+    <!-- Header -->
+<header class="header">
+  <h1 class="title">
+    <select id="fund-select" class="fund-dropdown-in-title">
+      <option value="abichandani">Abichandani Fund</option>
+      <option value="growth">Growth Fund</option>
+      <option value="equity">Equity Fund</option>
+      <option value="retirement">TEST for long title overflow hidden</option>
+    </select>
+  </h1>
+  </h1>
+  <div class="header-right">
+    <span class="welcome-text">Welcome, Manoj</span>
+
+    <!-- Hamburger with dropdown -->
+    <div class="menu-wrapper">
+      <button aria-label="Menu" class="menu-btn" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Dropdown Menu -->
+      <div class="dropdown-menu" id="dropdownMenu">
+        <button class="dropdown-item">My Details</button>
+        <button class="dropdown-item logout">Log Out</button>
+      </div>
+    </div>
+  </div>
+</header>
+    <div class="container-fluid mt-3">
+        <a href="index.html" class="btn-back">&#x2190; Back to Dashboard</a>
+      <!-- PAGE TITLE -->
+
+      <div
+        class="d-flex justify-content-between align-items-center mb-3 flex-wrap"
+      >
+        <h5>Permanent Documents</h5>
+      </div>
+      
+      <div class="container-fluid mt-3">
+
+        <!-- ACTION BUTTONS -->
+        <div class="d-flex flex-wrap gap-2 mb-3">
+
+            <button class="btn-info">
+            Export to Zip File
+            </button>
+
+            <button class="btn-info">
+            Upload Permanent Document
+            </button>
+
+        </div>      
+
+      <!-- TABS -->
+       <ul class="nav nav-tabs mb-2">
+
+  <li class="nav-item">
+    <button
+      class="nav-link active"
+      data-bs-toggle="tab"
+      data-bs-target="#permanent">
+      Permanent Documents
+    </button>
+  </li>
+
+  <li class="nav-item">
+    <button
+      class="nav-link"
+      data-bs-toggle="tab"
+      data-bs-target="#fydocs">
+      Documents FY 2025 - 2026
+    </button>
+  </li>
+
+  <li class="nav-item">
+    <button
+      class="nav-link"
+      data-bs-toggle="tab"
+      data-bs-target="#signed">
+      Signed Documents
+    </button>
+  </li>
+
+</ul>
+
+
+<!-- FINANCIAL YEAR DROPDOWN -->
+
+<div class="d-flex flex-wrap gap-2 mb-4">
+
+  <select class="form-select form-select-sm w-auto">
+    <option>2025 - 2026</option>
+    <option>2024 - 2025</option>
+    <option>2023 - 2024</option>
+  </select>
+
+  <button class="btn btn-info btn-sm">
+    Change Financial Year
+  </button>
+
+</div>
+
+      <div class="tab-content">
+        <!-- PERMANENT DOCUMENTS TAB -->
+
+        <div class="tab-pane fade show active" id="permanent">
+          <div class="table-card">
+            <div class="table-responsive">
+              <table class="table table-bordered align-middle">
+                <tbody>
+                  <tr>
+                    <td>1479</td>
+
+                    <td>Henry Accountant</td>
+
+                    <td>12 Volt Street.pdf</td>
+
+                    <td>
+                      <input
+                        type="text"
+                        class="form-control form-control-sm editable-input"
+                        value="Trustee consent form"
+                      />
+                    </td>
+
+                    <td>
+                      <input
+                        type="text"
+                        class="form-control form-control-sm editable-input"
+                        value="Trustee consent form for trustee"
+                      />
+                    </td>
+
+                    <td>11/12/2025</td>
+
+                    <td>
+                      <button class="btn btn-success btn-sm">Download</button>
+                      <button class="btn btn-danger btn-sm">Delete</button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1481</td>
+
+                    <td>Stephen Ginell</td>
+
+                    <td>Bank Statement.pdf</td>
+
+                    <td>
+                      <input
+                        type="text"
+                        class="form-control form-control-sm"
+                        value="Bank Statement"
+                      />
+                    </td>
+
+                    <td>
+                      <input
+                        type="text"
+                        class="form-control form-control-sm"
+                        value="Monthly bank statement"
+                      />
+                    </td>
+
+                    <td>11/12/2025</td>
+
+                    <td>
+                      <button class="btn btn-success btn-sm">Download</button>
+                      <button class="btn btn-danger btn-sm">Delete</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        
+        <!-- FY DOCUMENTS TAB -->
+
+        <div class="tab-pane fade" id="fydocs">
+          <div class="table-card">
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead class="table-info">
+                  <tr>
+                    <th>#</th>
+
+                    <th>Uploaded By</th>
+
+                    <th>Document</th>
+
+                    <th>Title</th>
+
+                    <th>Description</th>
+
+                    <th>Date</th>
+
+                    <th>Download</th>
+
+                    <th>Delete</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>1</td>
+
+                    <td>Accountant</td>
+
+                    <td>
+                      <select class="form-select form-select-sm">
+                        <option>Financial Statement</option>
+                        <option>Tax Return</option>
+                        <option>Investment Summary</option>
+                      </select>
+                    </td>
+
+                    <td>
+                      <input
+                        type="text"
+                        class="form-control form-control-sm"
+                        value="Financial Statement"
+                      />
+                    </td>
+
+                    <td>
+                      <input
+                        type="text"
+                        class="form-control form-control-sm"
+                        value="Annual financial statement"
+                      />
+                    </td>
+
+                    <td>12/12/2025</td>
+
+                    <td>
+                      <button class="btn btn-success btn-sm">Download</button>
+                      <button class="btn btn-danger btn-sm">Delete</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- SIGNED DOCUMENTS TAB -->
+
+<div class="tab-pane fade" id="signed">
+  <div class="table-card">
+    <div class="table-responsive">
+
+      <table class="table table-bordered align-middle">
+
+        <thead class="table-info">
+          <tr>
+            <th>#</th>
+            <th>Date</th>
+            <th>Document Name</th>
+            <th>Search Doc OCR</th>
+            <th>Download Document</th>
+            <th>Move to Folder</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>1</td>
+
+            <td>12/12/2025</td>
+
+            <td>Signed Trustee Resolution.pdf</td>
+
+            <td>
+              <input
+                type="text"
+                class="form-control form-control-sm"
+                placeholder="Search OCR text..."
+              />
+            </td>
+
+            <td>
+              <button class="btn btn-success btn-sm">
+                <i class="bi bi-download"></i> Download
+              </button>
+              <button
+                class="btn btn-primary btn-sm"
+                data-bs-toggle="modal"
+                data-bs-target="#moveFolderModal"
+                >
+                Move to Folder
+                </button>
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td>2</td>
+
+            <td>10/12/2025</td>
+
+            <td>Member Agreement Signed.pdf</td>
+
+            <td>
+              <input
+                type="text"
+                class="form-control form-control-sm"
+                placeholder="Search OCR text..."
+              />
+            </td>
+
+            <td>
+              <button class="btn btn-success btn-sm">
+                <i class="bi bi-download"></i> Download
+              </button>
+              <button
+                class="btn btn-primary btn-sm"
+                data-bs-toggle="modal"
+                data-bs-target="#moveFolderModal"
+                >
+                Move to Folder
+                </button>
+            </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <div class="modal fade" id="moveFolderModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Move Document to Folder</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <!-- Document Name (Locked) -->
+        <div class="mb-3">
+          <label class="form-label">Document Name</label>
+          <input
+            type="text"
+            class="form-control"
+            value="Signed Trustee Resolution.pdf"
+            readonly
+          />
+        </div>
+
+        <!-- Folder Selection -->
+        <div class="mb-3">
+          <label class="form-label">Move To</label>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="permDoc" />
+            <label class="form-check-label" for="permDoc">
+              Permanent Document
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="fyDoc" />
+            <label class="form-check-label" for="fyDoc">
+              Financial Year Document
+            </label>
+          </div>
+
+        </div>
+
+        <!-- Financial Year -->
+        <div class="mb-3">
+          <label class="form-label">Financial Year</label>
+          <select class="form-select">
+            <option>2025 - 2026</option>
+            <option>2024 - 2025</option>
+            <option>2023 - 2024</option>
+          </select>
+        </div>
+
+        <!-- Title Dropdown -->
+        <div class="mb-3">
+          <label class="form-label">Title</label>
+          <select class="form-select">
+            <option>Select Title</option>
+            <option>Trust Deed</option>
+            <option>Financial Statement</option>
+            <option>Tax Return</option>
+            <option>Investment Report</option>
+          </select>
+        </div>
+
+        <!-- Description -->
+        <div class="mb-3">
+          <label class="form-label">Description</label>
+          <textarea
+            class="form-control"
+            rows="3"
+            placeholder="Enter description"
+          ></textarea>
+        </div>
+
+        <!-- Visible to Accountant -->
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="visibleAcc" />
+          <label class="form-check-label" for="visibleAcc">
+            Document visible to accountant
+          </label>
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+
+        <button class="btn btn-secondary" data-bs-dismiss="modal">
+          Cancel
+        </button>
+
+        <button class="btn btn-info">
+          Save
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+  </body>
+  <!-- Footer -->
+    <footer class="footer">
+      &copy; 2025 Your Company. All rights reserved.
+    </footer>
+</html>
